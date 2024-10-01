@@ -73,11 +73,17 @@ public class SkillsController {
     public String fillForm(@RequestParam String name, @RequestParam String firstLanguage, @RequestParam String secondLanguage, @RequestParam String thirdLanguage){
         return "<h1>" + name + "</h1>" +
                 "<h2>" +
-                "<ol>" +
-                "<li>" + firstLanguage + "</li>" +
-                "<li>" + secondLanguage + "</li>" +
-                "<li>"+ thirdLanguage + "</li>" +
-                "</ol>" +
+                "<table>" +
+                    "<tr>" +
+                        "<th>Favorite Language</th>" +
+                        "<th>Second Favorite</th>" +
+                        "<th>Third Favorite</th>" +
+                    "</tr>" +
+                    "<tr>" +
+                        "<th>" + firstLanguage + "</th>" +
+                        "<th>" + secondLanguage + "</th>" +
+                        "<th>" + thirdLanguage + "</th>" +
+                    "</tr>" +
                 "</h2>";
     }
 }
